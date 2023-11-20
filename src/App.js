@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className='app'>
       <h1 className='display-1'>ToDo App</h1>
       <p className='mb-0 p-1'>Add a task here:</p>
       <form className='d-flex gap-1 p-1 mb-1'>
@@ -44,13 +44,11 @@ function App() {
 
 function Task({ task, onDelete }) {
   return (
-    <div>
+    <div className='my-3'>
       <Card>
         <Card.Body>
           <span>{task}</span>
-          <Button variant='danger' className='ms-auto' onClick={onDelete}>
-            Delete
-          </Button>
+          <ion-icon size='large' name='close' onClick={onDelete}></ion-icon>
         </Card.Body>
       </Card>
     </div>
@@ -59,7 +57,7 @@ function Task({ task, onDelete }) {
 
 const ToDoList = ({ tasks, onDelete }) => {
   return (
-    <div>
+    <div className='my-3'>
       {tasks.map((task, index) => (
         <Task key={index} task={task} onDelete={() => onDelete(index)} />
       ))}
