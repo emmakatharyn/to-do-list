@@ -1,11 +1,11 @@
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
 }
 
 .app {
@@ -14,9 +14,46 @@ body {
 }
 
 input {
-  width: 70%;
+  width: 80%;
 }
 
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.card-body {
+  width: 100%;
+}
+
+.task-content {
+  /* background-color: pink; */
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btns-box {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+button {
+  border: none;
+  background: none;
+  margin: 5px;
+  padding: 0;
+}
+
+ion-icon {
+  color: #444;
+}
 ion-icon[name="close"] {
   cursor: pointer;
 }
@@ -25,8 +62,16 @@ ion-icon[name="close"]:hover {
   color: red;
 }
 
-.card-body {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+ion-icon[name="create-outline"] {
+  font-size: 24px;
+  transform: translateY(-2px);
+}
+ion-icon[name="create-outline"]:hover {
+  color: #797979;
+}
+
+@media (max-width: 726px) {
+  .task-content {
+    width: 600px;
+  }
 }
