@@ -38,25 +38,27 @@ function App() {
   };
 
   return (
-    <div className='app'>
-      <h1 className='display-1'>ToDo App</h1>
+    <div className={isDarkMode ? "outer dark" : "outer"}>
+      <div className='app'>
+        <h1 className='display-1'>ToDo App</h1>
 
-      <p className='mb-0 p-1'>Add a task here:</p>
+        <p className='mb-0 p-1'>Add a task here:</p>
 
-      <div className='d-flex align-items-center justify-content-between'>
-        <AddTask onAddTask={handleAddTask} />
-        <DarkModeSwitch
-          style={{ marginRight: "1rem" }}
-          checked={isDarkMode}
-          onChange={toggleDarkMode}
-          size={32}
+        <div className='d-flex align-items-center justify-content-between'>
+          <AddTask onAddTask={handleAddTask} />
+          <DarkModeSwitch
+            style={{ marginRight: "1rem" }}
+            checked={isDarkMode}
+            onChange={toggleDarkMode}
+            size={32}
+          />
+        </div>
+        <TaskList
+          tasks={tasks}
+          onChangeTask={handleChangeTask}
+          onDeleteTask={handleDeleteTask}
         />
       </div>
-      <TaskList
-        tasks={tasks}
-        onChangeTask={handleChangeTask}
-        onDeleteTask={handleDeleteTask}
-      />
     </div>
   );
 }

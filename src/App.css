@@ -8,6 +8,12 @@ body {
   padding: 0;
 }
 
+.outer {
+  width: 100%;
+  height: 100vh;
+  background-color: #d5d5e7;
+}
+
 .app {
   max-width: 900px;
   margin: 0 auto;
@@ -25,6 +31,12 @@ form {
 h1 {
   margin-top: 0;
   font-size: 22px;
+}
+
+.card {
+  margin-top: 12px;
+  border: none;
+  --bs-card-border-width: 0;
 }
 
 .card-body {
@@ -57,14 +69,14 @@ button {
 }
 
 ion-icon {
-  color: #444;
+  color: #6d6d6d;
 }
 ion-icon[name="close"] {
   cursor: pointer;
 }
 
 ion-icon[name="close"]:hover {
-  color: red;
+  color: #e40881;
 }
 
 ion-icon[name="create-outline"] {
@@ -72,7 +84,23 @@ ion-icon[name="create-outline"] {
   transform: translateY(-2px);
 }
 ion-icon[name="create-outline"]:hover {
-  color: #797979;
+  color: #8f8f8f;
+}
+
+/* dark */
+.dark {
+  background-color: #212063;
+}
+
+.dark h1,
+.dark p {
+  color: #d5d5e7;
+}
+
+.dark .card-body {
+  background-color: #2a0e3a;
+  color: #d5d5e7;
+  border: 1px solid magenta;
 }
 
 @media (max-width: 726px) {
