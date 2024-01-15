@@ -61,12 +61,14 @@ function App() {
   );
 }
 
-let nextId = 3;
+let nextId = 5;
 // list of items that will always be there on page load
 const defaultList = [
-  { id: 0, text: "Take A.M. Meds", done: true },
+  { id: 0, text: "get out of bed", done: true },
   { id: 1, text: "Espresso A.M.", done: true },
-  { id: 2, text: "Wash dishes", done: false },
+  { id: 2, text: "more espresso", done: false },
+  { id: 3, text: "panic attack!!!", done: false },
+  { id: 4, text: "back to bed", done: false },
 ];
 
 export default App;
