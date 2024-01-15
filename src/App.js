@@ -5,8 +5,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AddTask from "./AddTask";
 import TaskList from "./TaskList";
 
+import { DarkModeSwitch } from "react-toggle-dark-mode";
+
 function App() {
+  const [isDarkMode, setDarkMode] = React.useState(false);
   const [tasks, setTasks] = useState(defaultList);
+
+  const toggleDarkMode = (checked) => {
+    setDarkMode(checked);
+  };
 
   const handleAddTask = (text) => {
     if (text.trim() !== "") {
@@ -33,9 +40,18 @@ function App() {
   return (
     <div className='app'>
       <h1 className='display-1'>ToDo App</h1>
+
       <p className='mb-0 p-1'>Add a task here:</p>
 
-      <AddTask onAddTask={handleAddTask} />
+      <div className='d-flex align-items-center justify-content-between'>
+        <AddTask onAddTask={handleAddTask} />
+        <DarkModeSwitch
+          style={{ marginRight: "1rem" }}
+          checked={isDarkMode}
+          onChange={toggleDarkMode}
+          size={32}
+        />
+      </div>
       <TaskList
         tasks={tasks}
         onChangeTask={handleChangeTask}

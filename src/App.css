@@ -11,10 +11,15 @@ body {
 .app {
   max-width: 900px;
   margin: 0 auto;
+  /* background-color: #444; */
 }
 
 input {
   width: 80%;
+}
+
+form {
+  width: 890px;
 }
 
 h1 {
